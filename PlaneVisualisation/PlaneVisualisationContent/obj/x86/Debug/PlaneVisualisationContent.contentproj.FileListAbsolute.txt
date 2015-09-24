@@ -1,0 +1,4 @@
+C:\StoreDev\Visual Studio 2008\FDAMM\FDAMM_RA\PlaneVisualisation\PlaneVisualisationContent\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\Visual Studio 2008\FDAMM\FDAMM_RA\PlaneVisualisation\PlaneVisualisationContent\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\FDAMM_RA_191112\FDAMM_RA_191112\PlaneVisualisation\PlaneVisualisationContent\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Store\Visual Studio 2008\FDAMM\FDAMM_RA\PlaneVisualisation\PlaneVisualisationContent\obj\x86\Debug\ResolveAssemblyReference.cache

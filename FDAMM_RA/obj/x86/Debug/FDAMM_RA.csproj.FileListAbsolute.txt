@@ -1,0 +1,148 @@
+C:\StoreDev\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\bin\Debug\Content\plane.xnb
+C:\StoreDev\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\bin\Debug\Content\plane.FBX
+C:\StoreDev\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\bin\Debug\FDAMM_RA.exe
+C:\StoreDev\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\bin\Debug\FDAMM_RA.pdb
+C:\StoreDev\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\bin\Debug\MathPlaneModel.dll
+C:\StoreDev\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\bin\Debug\PlaneVisualisation.dll
+C:\StoreDev\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\bin\Debug\Resources.dll
+C:\StoreDev\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll
+C:\StoreDev\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\bin\Debug\ZedGraph.dll
+C:\StoreDev\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\bin\Debug\MathPlaneModel.pdb
+C:\StoreDev\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\bin\Debug\Resources.pdb
+C:\StoreDev\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\bin\Debug\PlaneVisualisation.pdb
+C:\StoreDev\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\bin\Debug\ZedGraph.xml
+C:\StoreDev\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\StoreDev\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\obj\x86\Debug\FDAMM_RA.AviatingForm.resources
+C:\StoreDev\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\obj\x86\Debug\FDAMM_RA.ManeuversForm.resources
+C:\StoreDev\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\obj\x86\Debug\FDAMM_RA.RouteControlForm.resources
+C:\StoreDev\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\obj\x86\Debug\FDAMM_RA.StabilizationForm.resources
+C:\StoreDev\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\obj\x86\Debug\FDAMM_RA.DataGridForm.resources
+C:\StoreDev\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\obj\x86\Debug\FDAMM_RA.FlyParamForm.resources
+C:\StoreDev\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\obj\x86\Debug\FDAMM_RA.GraphicsForm.resources
+C:\StoreDev\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\obj\x86\Debug\FDAMM_RA.GraphicsListForm.resources
+C:\StoreDev\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\obj\x86\Debug\FDAMM_RA.MainForm.resources
+C:\StoreDev\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\obj\x86\Debug\FDAMM_RA.StaticsForm.resources
+C:\StoreDev\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\obj\x86\Debug\FDAMM_RA.Properties.Resources.resources
+C:\StoreDev\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\StoreDev\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\StoreDev\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\obj\x86\Debug\FDAMM_RA.exe
+C:\StoreDev\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\obj\x86\Debug\FDAMM_RA.pdb
+E:\Visual Studio 2008\FDAMM\FDAMM_RA_010412\FDAMM_RA\obj\x86\Debug\FDAMM_RA.exe
+E:\Visual Studio 2008\FDAMM\FDAMM_RA_010412\FDAMM_RA\obj\x86\Debug\FDAMM_RA.pdb
+E:\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\obj\x86\Debug\FDAMM_RA.exe
+E:\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\obj\x86\Debug\FDAMM_RA.pdb
+E:\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\bin\Debug\Content\plane.FBX
+E:\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\bin\Debug\Content\plane.xnb
+E:\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\bin\Debug\FDAMM_RA.exe
+E:\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\bin\Debug\FDAMM_RA.pdb
+E:\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\bin\Debug\MathPlaneModel.dll
+E:\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\bin\Debug\PlaneVisualisation.dll
+E:\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\bin\Debug\Resources.dll
+E:\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll
+E:\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\bin\Debug\ZedGraph.dll
+E:\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\bin\Debug\MathPlaneModel.pdb
+E:\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\bin\Debug\Resources.pdb
+E:\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\bin\Debug\PlaneVisualisation.pdb
+E:\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\bin\Debug\ZedGraph.xml
+E:\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\obj\x86\Debug\FDAMM_RA.AviatingForm.resources
+E:\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\obj\x86\Debug\FDAMM_RA.ManeuversForm.resources
+E:\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\obj\x86\Debug\FDAMM_RA.RouteControlForm.resources
+E:\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\obj\x86\Debug\FDAMM_RA.StabilizationForm.resources
+E:\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\obj\x86\Debug\FDAMM_RA.DataGridForm.resources
+E:\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\obj\x86\Debug\FDAMM_RA.FlyParamForm.resources
+E:\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\obj\x86\Debug\FDAMM_RA.GraphicsForm.resources
+E:\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\obj\x86\Debug\FDAMM_RA.GraphicsListForm.resources
+E:\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\obj\x86\Debug\FDAMM_RA.MainForm.resources
+E:\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\obj\x86\Debug\FDAMM_RA.StaticsForm.resources
+E:\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\obj\x86\Debug\FDAMM_RA.Properties.Resources.resources
+E:\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\FDAMM_RA_191112\FDAMM_RA_191112\FDAMM_RA\obj\x86\Debug\FDAMM_RA.exe
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\FDAMM_RA_191112\FDAMM_RA_191112\FDAMM_RA\obj\x86\Debug\FDAMM_RA.pdb
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\FDAMM_RA_191112\FDAMM_RA_191112\FDAMM_RA\bin\Debug\Content\plane.FBX
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\FDAMM_RA_191112\FDAMM_RA_191112\FDAMM_RA\bin\Debug\Content\plane.xnb
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\FDAMM_RA_191112\FDAMM_RA_191112\FDAMM_RA\bin\Debug\FDAMM_RA.exe
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\FDAMM_RA_191112\FDAMM_RA_191112\FDAMM_RA\bin\Debug\FDAMM_RA.pdb
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\FDAMM_RA_191112\FDAMM_RA_191112\FDAMM_RA\bin\Debug\MathPlaneModel.dll
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\FDAMM_RA_191112\FDAMM_RA_191112\FDAMM_RA\bin\Debug\PlaneVisualisation.dll
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\FDAMM_RA_191112\FDAMM_RA_191112\FDAMM_RA\bin\Debug\Resources.dll
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\FDAMM_RA_191112\FDAMM_RA_191112\FDAMM_RA\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\FDAMM_RA_191112\FDAMM_RA_191112\FDAMM_RA\bin\Debug\ZedGraph.dll
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\FDAMM_RA_191112\FDAMM_RA_191112\FDAMM_RA\bin\Debug\MathPlaneModel.pdb
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\FDAMM_RA_191112\FDAMM_RA_191112\FDAMM_RA\bin\Debug\Resources.pdb
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\FDAMM_RA_191112\FDAMM_RA_191112\FDAMM_RA\bin\Debug\PlaneVisualisation.pdb
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\FDAMM_RA_191112\FDAMM_RA_191112\FDAMM_RA\bin\Debug\ZedGraph.xml
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\FDAMM_RA_191112\FDAMM_RA_191112\FDAMM_RA\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\FDAMM_RA_191112\FDAMM_RA_191112\FDAMM_RA\obj\x86\Debug\FDAMM_RA.AviatingForm.resources
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\FDAMM_RA_191112\FDAMM_RA_191112\FDAMM_RA\obj\x86\Debug\FDAMM_RA.ManeuversForm.resources
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\FDAMM_RA_191112\FDAMM_RA_191112\FDAMM_RA\obj\x86\Debug\FDAMM_RA.RouteControlForm.resources
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\FDAMM_RA_191112\FDAMM_RA_191112\FDAMM_RA\obj\x86\Debug\FDAMM_RA.StabilizationForm.resources
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\FDAMM_RA_191112\FDAMM_RA_191112\FDAMM_RA\obj\x86\Debug\FDAMM_RA.DataGridForm.resources
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\FDAMM_RA_191112\FDAMM_RA_191112\FDAMM_RA\obj\x86\Debug\FDAMM_RA.FlyParamForm.resources
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\FDAMM_RA_191112\FDAMM_RA_191112\FDAMM_RA\obj\x86\Debug\FDAMM_RA.GraphicsForm.resources
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\FDAMM_RA_191112\FDAMM_RA_191112\FDAMM_RA\obj\x86\Debug\FDAMM_RA.GraphicsListForm.resources
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\FDAMM_RA_191112\FDAMM_RA_191112\FDAMM_RA\obj\x86\Debug\FDAMM_RA.MainForm.resources
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\FDAMM_RA_191112\FDAMM_RA_191112\FDAMM_RA\obj\x86\Debug\FDAMM_RA.StaticsForm.resources
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\FDAMM_RA_191112\FDAMM_RA_191112\FDAMM_RA\obj\x86\Debug\FDAMM_RA.Properties.Resources.resources
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\FDAMM_RA_191112\FDAMM_RA_191112\FDAMM_RA\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\FDAMM_RA_191112\FDAMM_RA_191112\FDAMM_RA\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Store\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\obj\x86\Debug\FDAMM_RA.exe
+C:\Store\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\obj\x86\Debug\FDAMM_RA.pdb
+C:\Store\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\bin\Debug\Content\plane.xnb
+C:\Store\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\bin\Debug\FDAMM_RA.exe
+C:\Store\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\bin\Debug\FDAMM_RA.pdb
+C:\Store\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\bin\Debug\MathPlaneModel.dll
+C:\Store\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\bin\Debug\PlaneVisualisation.dll
+C:\Store\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\bin\Debug\Resources.dll
+C:\Store\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll
+C:\Store\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\bin\Debug\ZedGraph.dll
+C:\Store\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\bin\Debug\MathPlaneModel.pdb
+C:\Store\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\bin\Debug\Resources.pdb
+C:\Store\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\bin\Debug\PlaneVisualisation.pdb
+C:\Store\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\bin\Debug\ZedGraph.xml
+C:\Store\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Store\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\obj\x86\Debug\FDAMM_RA.AviatingForm.resources
+C:\Store\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\obj\x86\Debug\FDAMM_RA.DataGridForm.resources
+C:\Store\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\obj\x86\Debug\FDAMM_RA.FlyParamForm.resources
+C:\Store\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\obj\x86\Debug\FDAMM_RA.GraphicsForm.resources
+C:\Store\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\obj\x86\Debug\FDAMM_RA.GraphicsListForm.resources
+C:\Store\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\obj\x86\Debug\FDAMM_RA.MainForm.resources
+C:\Store\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\obj\x86\Debug\FDAMM_RA.StaticsForm.resources
+C:\Store\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\obj\x86\Debug\FDAMM_RA.Properties.Resources.resources
+C:\Store\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Store\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Store\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\obj\x86\Debug\FDAMM_RA.AutopilotForm.resources
+C:\Store\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\obj\x86\Debug\FDAMM_RA.ScriptingAutopilotForm.resources
+C:\Store\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\bin\Debug\FTD2XX_NET.dll
+C:\Store\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\bin\Debug\FTD2XX_NET.xml
+C:\Store\Visual Studio 2008\FDAMM\FDAMM_RA\FDAMM_RA\obj\x86\Debug\FDAMM_RA.HardwareDeviceAttachingForm.resources
+C:\Visual Studio\FDAMM_RA\FDAMM_RA\obj\x86\Debug\FDAMM_RA.exe
+C:\Visual Studio\FDAMM_RA\FDAMM_RA\obj\x86\Debug\FDAMM_RA.pdb
+C:\Visual Studio\FDAMM_RA\FDAMM_RA\bin\Debug\Content\plane.xnb
+C:\Visual Studio\FDAMM_RA\FDAMM_RA\bin\Debug\FDAMM_RA.exe
+C:\Visual Studio\FDAMM_RA\FDAMM_RA\bin\Debug\FDAMM_RA.pdb
+C:\Visual Studio\FDAMM_RA\FDAMM_RA\bin\Debug\FTD2XX_NET.dll
+C:\Visual Studio\FDAMM_RA\FDAMM_RA\bin\Debug\MathPlaneModel.dll
+C:\Visual Studio\FDAMM_RA\FDAMM_RA\bin\Debug\PlaneVisualisation.dll
+C:\Visual Studio\FDAMM_RA\FDAMM_RA\bin\Debug\Resources.dll
+C:\Visual Studio\FDAMM_RA\FDAMM_RA\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll
+C:\Visual Studio\FDAMM_RA\FDAMM_RA\bin\Debug\ZedGraph.dll
+C:\Visual Studio\FDAMM_RA\FDAMM_RA\bin\Debug\MathPlaneModel.pdb
+C:\Visual Studio\FDAMM_RA\FDAMM_RA\bin\Debug\Resources.pdb
+C:\Visual Studio\FDAMM_RA\FDAMM_RA\bin\Debug\PlaneVisualisation.pdb
+C:\Visual Studio\FDAMM_RA\FDAMM_RA\bin\Debug\FTD2XX_NET.xml
+C:\Visual Studio\FDAMM_RA\FDAMM_RA\bin\Debug\ZedGraph.xml
+C:\Visual Studio\FDAMM_RA\FDAMM_RA\obj\x86\Debug\FDAMM_RA.csprojResolveAssemblyReference.cache
+C:\Visual Studio\FDAMM_RA\FDAMM_RA\obj\x86\Debug\FDAMM_RA.AviatingForm.resources
+C:\Visual Studio\FDAMM_RA\FDAMM_RA\obj\x86\Debug\FDAMM_RA.AutopilotForm.resources
+C:\Visual Studio\FDAMM_RA\FDAMM_RA\obj\x86\Debug\FDAMM_RA.ScriptingAutopilotForm.resources
+C:\Visual Studio\FDAMM_RA\FDAMM_RA\obj\x86\Debug\FDAMM_RA.DataGridForm.resources
+C:\Visual Studio\FDAMM_RA\FDAMM_RA\obj\x86\Debug\FDAMM_RA.FlyParamForm.resources
+C:\Visual Studio\FDAMM_RA\FDAMM_RA\obj\x86\Debug\FDAMM_RA.GraphicsForm.resources
+C:\Visual Studio\FDAMM_RA\FDAMM_RA\obj\x86\Debug\FDAMM_RA.GraphicsListForm.resources
+C:\Visual Studio\FDAMM_RA\FDAMM_RA\obj\x86\Debug\FDAMM_RA.MainForm.resources
+C:\Visual Studio\FDAMM_RA\FDAMM_RA\obj\x86\Debug\FDAMM_RA.StaticsForm.resources
+C:\Visual Studio\FDAMM_RA\FDAMM_RA\obj\x86\Debug\FDAMM_RA.HardwareDeviceAttachingForm.resources
+C:\Visual Studio\FDAMM_RA\FDAMM_RA\obj\x86\Debug\FDAMM_RA.Properties.Resources.resources
+C:\Visual Studio\FDAMM_RA\FDAMM_RA\obj\x86\Debug\FDAMM_RA.csproj.GenerateResource.Cache

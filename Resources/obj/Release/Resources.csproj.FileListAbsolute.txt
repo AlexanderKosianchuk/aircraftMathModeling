@@ -1,0 +1,8 @@
+C:\StoreDev\Visual Studio 2008\FDAMM\FDAMM_RA\Resources\bin\Release\Resources.dll
+C:\StoreDev\Visual Studio 2008\FDAMM\FDAMM_RA\Resources\bin\Release\Resources.pdb
+C:\StoreDev\Visual Studio 2008\FDAMM\FDAMM_RA\Resources\obj\Release\ResolveAssemblyReference.cache
+C:\StoreDev\Visual Studio 2008\FDAMM\FDAMM_RA\Resources\obj\Release\Resources.BitmapResources.resources
+C:\StoreDev\Visual Studio 2008\FDAMM\FDAMM_RA\Resources\obj\Release\GenerateResource.read.1.tlog
+C:\StoreDev\Visual Studio 2008\FDAMM\FDAMM_RA\Resources\obj\Release\GenerateResource.write.1.tlog
+C:\StoreDev\Visual Studio 2008\FDAMM\FDAMM_RA\Resources\obj\Release\Resources.dll
+C:\StoreDev\Visual Studio 2008\FDAMM\FDAMM_RA\Resources\obj\Release\Resources.pdb

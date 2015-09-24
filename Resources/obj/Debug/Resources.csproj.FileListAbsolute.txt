@@ -1,0 +1,30 @@
+C:\StoreDev\Visual Studio 2008\FDAMM\FDAMM_RA\Resources\bin\Debug\Resources.dll
+C:\StoreDev\Visual Studio 2008\FDAMM\FDAMM_RA\Resources\bin\Debug\Resources.pdb
+C:\StoreDev\Visual Studio 2008\FDAMM\FDAMM_RA\Resources\obj\Debug\ResolveAssemblyReference.cache
+C:\StoreDev\Visual Studio 2008\FDAMM\FDAMM_RA\Resources\obj\Debug\Resources.BitmapResources.resources
+C:\StoreDev\Visual Studio 2008\FDAMM\FDAMM_RA\Resources\obj\Debug\GenerateResource.read.1.tlog
+C:\StoreDev\Visual Studio 2008\FDAMM\FDAMM_RA\Resources\obj\Debug\GenerateResource.write.1.tlog
+C:\StoreDev\Visual Studio 2008\FDAMM\FDAMM_RA\Resources\obj\Debug\Resources.dll
+C:\StoreDev\Visual Studio 2008\FDAMM\FDAMM_RA\Resources\obj\Debug\Resources.pdb
+E:\Visual Studio 2008\FDAMM\FDAMM_RA\Resources\bin\Debug\Resources.dll
+E:\Visual Studio 2008\FDAMM\FDAMM_RA\Resources\bin\Debug\Resources.pdb
+E:\Visual Studio 2008\FDAMM\FDAMM_RA\Resources\obj\Debug\ResolveAssemblyReference.cache
+E:\Visual Studio 2008\FDAMM\FDAMM_RA\Resources\obj\Debug\Resources.BitmapResources.resources
+E:\Visual Studio 2008\FDAMM\FDAMM_RA\Resources\obj\Debug\GenerateResource.read.1.tlog
+E:\Visual Studio 2008\FDAMM\FDAMM_RA\Resources\obj\Debug\GenerateResource.write.1.tlog
+E:\Visual Studio 2008\FDAMM\FDAMM_RA\Resources\obj\Debug\Resources.dll
+E:\Visual Studio 2008\FDAMM\FDAMM_RA\Resources\obj\Debug\Resources.pdb
+C:\Store\Visual Studio 2008\FDAMM\FDAMM_RA\Resources\bin\Debug\Resources.dll
+C:\Store\Visual Studio 2008\FDAMM\FDAMM_RA\Resources\bin\Debug\Resources.pdb
+C:\Store\Visual Studio 2008\FDAMM\FDAMM_RA\Resources\obj\Debug\ResolveAssemblyReference.cache
+C:\Store\Visual Studio 2008\FDAMM\FDAMM_RA\Resources\obj\Debug\Resources.BitmapResources.resources
+C:\Store\Visual Studio 2008\FDAMM\FDAMM_RA\Resources\obj\Debug\GenerateResource.read.1.tlog
+C:\Store\Visual Studio 2008\FDAMM\FDAMM_RA\Resources\obj\Debug\GenerateResource.write.1.tlog
+C:\Store\Visual Studio 2008\FDAMM\FDAMM_RA\Resources\obj\Debug\Resources.dll
+C:\Store\Visual Studio 2008\FDAMM\FDAMM_RA\Resources\obj\Debug\Resources.pdb
+C:\Visual Studio\FDAMM_RA\Resources\bin\Debug\Resources.dll
+C:\Visual Studio\FDAMM_RA\Resources\bin\Debug\Resources.pdb
+C:\Visual Studio\FDAMM_RA\Resources\obj\Debug\Resources.BitmapResources.resources
+C:\Visual Studio\FDAMM_RA\Resources\obj\Debug\Resources.csproj.GenerateResource.Cache
+C:\Visual Studio\FDAMM_RA\Resources\obj\Debug\Resources.dll
+C:\Visual Studio\FDAMM_RA\Resources\obj\Debug\Resources.pdb
