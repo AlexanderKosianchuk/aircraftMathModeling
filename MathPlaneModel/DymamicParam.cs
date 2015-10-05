@@ -1,29 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace MathPlaneModel
 {
-
     public class Controls
     {
-        public double e;                   
-        public double n;                         
-        public double e_rv;
-        public double Tr;
+        public double e = 0;                   
+        public double n = 0;                         
+        public double e_rv = 0;
+        public double Tr = 0;
 
-        public double e_DEL;
-        public double n_DEL;
-        public double e_rv_DEL;
-        public double Tr_DEL;
+        public double e_DEL = 0;
+        public double n_DEL = 0;
+        public double e_rv_DEL = 0;
+        public double Tr_DEL = 0;
 
-        public double e_BAL;
-        public double n_BAL;
-        public double e_rv_BAL;
-        public double Tr_BAL;
+        public double e_BAL = 0;
+        public double n_BAL = 0;
+        public double e_rv_BAL = 0;
+        public double Tr_BAL = 0;
 
-        public double fW; //угол поворота переднего колеса
+        public double fW = 0; //угол поворота переднего колеса
 
         public void Clear()
         {
@@ -48,33 +45,33 @@ namespace MathPlaneModel
 
     public class Moments
     {
-        public double x;
-        public double y;
-        public double z;
+        public double x = 0;
+        public double y = 0;
+        public double z = 0;
 
-        public double x1;                          
-        public double x2;                          
-        public double x3;                           
-        public double y1;                           
-        public double y2;                             
-        public double y3;                           
-        public double z1;                           
-        public double z2;                             
-        public double z3;
+        public double x1 = 0;                          
+        public double x2 = 0;                          
+        public double x3 = 0;                           
+        public double y1 = 0;                           
+        public double y2 = 0;                             
+        public double y3 = 0;                           
+        public double z1 = 0;                           
+        public double z2 = 0;                             
+        public double z3 = 0;
 
-        public double yz;  //момент, создаваемый боковыми аэродин. силами
-        public double yWy; //момент демпфирования обусловленый угловой скоростью Wy
-        public double yp; //момент, как следствие несиметричной тяги двиготелей
-        public double yt; //момент несиметричного торможения   
+        public double yz = 0;  //момент, создаваемый боковыми аэродин. силами
+        public double yWy = 0; //момент демпфирования обусловленый угловой скоростью Wy
+        public double yp = 0; //момент, как следствие несиметричной тяги двиготелей
+        public double yt = 0; //момент несиметричного торможения   
 
-        public double x_roll;
-        public double x_slide;
+        public double x_roll = 0;
+        public double x_slide = 0;
 
-        public double y_roll;
-        public double y_slide;
+        public double y_roll = 0;
+        public double y_slide = 0;
 
-        public double z_roll;
-        public double z_slide;
+        public double z_roll = 0;
+        public double z_slide = 0;
 
         public void Clear()
         {
@@ -87,23 +84,23 @@ namespace MathPlaneModel
 
     public class Forses
     {
-        public double x;
-        public double y;
-        public double z;
+        public double x = 0;
+        public double y = 0;
+        public double z = 0;
 
-        public double x1;                   
-        public double x2;                   
-        public double x3;                     
-        public double y1;                       
-        public double y2;                      
-        public double y3;                        
-        public double z1;                     
-        public double z2;                   
-        public double z3;
+        public double x1 = 0;                   
+        public double x2 = 0;                   
+        public double x3 = 0;                     
+        public double y1 = 0;                       
+        public double y2 = 0;                      
+        public double y3 = 0;                        
+        public double z1 = 0;                     
+        public double z2 = 0;                   
+        public double z3 = 0;
 
-        public double zBETA;
-        public double zDELn;
-        public double zt;  //сила торможения   
+        public double zBETA = 0;
+        public double zDELn = 0;
+        public double zt = 0;  //сила торможения   
 
         public void Clear()
         {
@@ -116,9 +113,9 @@ namespace MathPlaneModel
 
     public class Coefficient
     {
-        public double x;                    
-        public double y;                       
-        public double z;
+        public double x = 0;                    
+        public double y = 0;                       
+        public double z = 0;
 
         public void Clear()
         {
@@ -131,11 +128,11 @@ namespace MathPlaneModel
 
     public class Overload //N
     {
-        public double x;
-        public double y;
-        public double z;
+        public double x = 0;
+        public double y = 0;
+        public double z = 0;
 
-        public double xt;
+        public double xt = 0;
 
         public void Clear()
         {
@@ -147,9 +144,9 @@ namespace MathPlaneModel
 
     public class OperatingAngularVelocity
     {
-        public double Wx;                   
-        public double Wy;                   
-        public double Wz;
+        public double Wx = 0;                   
+        public double Wy = 0;                   
+        public double Wz = 0;
 
         public void Clear()
         {
@@ -164,81 +161,81 @@ namespace MathPlaneModel
     /// </summary>
     public class DifferentialMeanings
     {
-        public double V;
+        public double V = 0;
 
-        public double Vx;
-        public double Vy;
-        public double Vz;
+        public double Vx = 0;
+        public double Vy = 0;
+        public double Vz = 0;
 
-        public double Wx;
-        public double Wy;
-        public double Wz;
+        public double Wx = 0;
+        public double Wy = 0;
+        public double Wz = 0;
 
-        public double X;
-        public double Y;
-        public double Z;
+        public double X = 0;
+        public double Y = 0;
+        public double Z = 0;
 
-        public double Xg;
-        public double Yg;
-        public double Zg;
+        public double Xg = 0;
+        public double Yg = 0;
+        public double Zg = 0;
 
-        public double GAMA;
-        public double GAMAc;
+        public double GAMA = 0;
+        public double GAMAc = 0;
 
-        public double PSI;
-        public double PSIc;
+        public double PSI = 0;
+        public double PSIc = 0;
 
-        public double THETA;
-        public double THETA_PATH;
-        public double THETAt;
+        public double THETA = 0;
+        public double THETA_PATH = 0;
+        public double THETAt = 0;
 
-        public double ALPHA;
-        public double BETA;
+        public double ALPHA = 0;
+        public double BETA = 0;
 
-        public double ALPHAt;
-        public double BETAt;
-
-        //==============================
-
-        public double V_DEL;
-
-        public double Xg_DEL;
-        public double Yg_DEL;
-        public double Zg_DEL;
-
-        public double Wx_DEL;
-        public double Wy_DEL;
-        public double Wz_DEL;
-
-        public double GAMA_DEL;
-        public double PSI_DEL;
-
-        public double THETA_DEL;
-        public double THETA_PATH_DEL;
-
-        public double ALPHA_DEL;
-        public double BETA_DEL;
+        public double ALPHAt = 0;
+        public double BETAt = 0;
 
         //==============================
 
-        public double V_BAL;
+        public double V_DEL = 0;
 
-        public double Xg_BAL;
-        public double Yg_BAL;
-        public double Zg_BAL;
+        public double Xg_DEL = 0;
+        public double Yg_DEL = 0;
+        public double Zg_DEL = 0;
 
-        public double Wx_BAL;
-        public double Wy_BAL;
-        public double Wz_BAL;
+        public double Wx_DEL = 0;
+        public double Wy_DEL = 0;
+        public double Wz_DEL = 0;
 
-        public double GAMA_BAL;
-        public double PSI_BAL;
+        public double GAMA_DEL = 0;
+        public double PSI_DEL = 0;
 
-        public double THETA_BAL;
-        public double THETA_PATH_BAL;
+        public double THETA_DEL = 0;
+        public double THETA_PATH_DEL = 0;
 
-        public double ALPHA_BAL;
-        public double BETA_BAL;
+        public double ALPHA_DEL = 0;
+        public double BETA_DEL = 0;
+
+        //==============================
+
+        public double V_BAL = 0;
+
+        public double Xg_BAL = 0;
+        public double Yg_BAL = 0;
+        public double Zg_BAL = 0;
+
+        public double Wx_BAL = 0;
+        public double Wy_BAL = 0;
+        public double Wz_BAL = 0;
+
+        public double GAMA_BAL = 0;
+        public double PSI_BAL = 0;
+
+        public double THETA_BAL = 0;
+        public double THETA_PATH_BAL = 0;
+
+        public double ALPHA_BAL = 0;
+        public double BETA_BAL = 0;
 
         //==============================
 
@@ -327,85 +324,85 @@ namespace MathPlaneModel
     /// </summary>
     public class IntegralMeanings
     {
-        public double V;
+        public double V = 0;
 
-        public double Vx;
-        public double Vy;
-        public double Vz;
+        public double Vx = 0;
+        public double Vy = 0;
+        public double Vz = 0;
 
-        public double Wx;
-        public double Wy;
-        public double Wz;
+        public double Wx = 0;
+        public double Wy = 0;
+        public double Wz = 0;
 
-        public double X;
-        public double Y;
-        public double Z;
+        public double X = 0;
+        public double Y = 0;
+        public double Z = 0;
 
-        public double Xg;
-        public double Yg;
-        public double Zg;
+        public double Xg = 0;
+        public double Yg = 0;
+        public double Zg = 0;
 
-        public double GAMA;
-        public double GAMAc;
+        public double GAMA = 0;
+        public double GAMAc = 0;
 
-        public double PSI;
-        public double PSIc;
+        public double PSI = 0;
+        public double PSIc = 0;
 
-        public double THETA;
-        public double THETA_PATH;
-        public double THETAt;
+        public double THETA = 0;
+        public double THETA_PATH = 0;
+        public double THETAt = 0;
 
-        public double ALPHA;
-        public double BETA;
+        public double ALPHA = 0;
+        public double BETA = 0;
 
-        public double ALPHAt;
-        public double BETAt;
+        public double ALPHAt = 0;
+        public double BETAt = 0;
 
-        public double q;
-        public double Q;
-        public double R;
-
-        //==============================
-
-        public double V_DEL;
-
-        public double Xg_DEL;
-        public double Yg_DEL;
-        public double Zg_DEL;
-
-        public double Wx_DEL;
-        public double Wy_DEL;
-        public double Wz_DEL;
-
-        public double GAMA_DEL;
-        public double PSI_DEL;
-
-        public double THETA_DEL;
-        public double THETA_PATH_DEL;
-
-        public double ALPHA_DEL;
-        public double BETA_DEL;
+        public double q = 0;
+        public double Q = 0;
+        public double R = 0;
 
         //==============================
 
-        public double V_BAL;
+        public double V_DEL = 0;
 
-        public double Xg_BAL;
-        public double Yg_BAL;
-        public double Zg_BAL;
+        public double Xg_DEL = 0;
+        public double Yg_DEL = 0;
+        public double Zg_DEL = 0;
 
-        public double Wx_BAL;
-        public double Wy_BAL;
-        public double Wz_BAL;
+        public double Wx_DEL = 0;
+        public double Wy_DEL = 0;
+        public double Wz_DEL = 0;
 
-        public double GAMA_BAL;
-        public double PSI_BAL;
+        public double GAMA_DEL = 0;
+        public double PSI_DEL = 0;
 
-        public double THETA_BAL;
-        public double THETA_PATH_BAL;
+        public double THETA_DEL = 0;
+        public double THETA_PATH_DEL = 0;
 
-        public double ALPHA_BAL;
-        public double BETA_BAL;
+        public double ALPHA_DEL = 0;
+        public double BETA_DEL = 0;
+
+        //==============================
+
+        public double V_BAL = 0;
+
+        public double Xg_BAL = 0;
+        public double Yg_BAL = 0;
+        public double Zg_BAL = 0;
+
+        public double Wx_BAL = 0;
+        public double Wy_BAL = 0;
+        public double Wz_BAL = 0;
+
+        public double GAMA_BAL = 0;
+        public double PSI_BAL = 0;
+
+        public double THETA_BAL = 0;
+        public double THETA_PATH_BAL = 0;
+
+        public double ALPHA_BAL = 0;
+        public double BETA_BAL = 0;
 
         //==============================
 
@@ -496,41 +493,41 @@ namespace MathPlaneModel
     /// </summary>
     public class LinearizedCoefficient
     {
-        public double c1;
-        public double c2;
-        public double c3;
-        public double c4;
-        public double c5;
-        public double c6;
-        public double c7;
-        public double c8;
-        public double c9;
-        public double c10;
-        public double c11;
+        public double c1 = 0;
+        public double c2 = 0;
+        public double c3 = 0;
+        public double c4 = 0;
+        public double c5 = 0;
+        public double c6 = 0;
+        public double c7 = 0;
+        public double c8 = 0;
+        public double c9 = 0;
+        public double c10 = 0;
+        public double c11 = 0;
 
-        public double a1;
-        public double a2;
-        public double a3;
-        public double a4;
-        public double a5;
-        public double a6;
-        public double a7;
-        public double a8;
-        public double a9;
-        public double a10;
+        public double a1 = 0;
+        public double a2 = 0;
+        public double a3 = 0;
+        public double a4 = 0;
+        public double a5 = 0;
+        public double a6 = 0;
+        public double a7 = 0;
+        public double a8 = 0;
+        public double a9 = 0;
+        public double a10 = 0;
 
-        public double b1;
-        public double b2;
-        public double b3;
-        public double b4;
-        public double b5;
-        public double b6;
-        public double b7;
-        public double b8;
-        public double b9;
+        public double b1 = 0;
+        public double b2 = 0;
+        public double b3 = 0;
+        public double b4 = 0;
+        public double b5 = 0;
+        public double b6 = 0;
+        public double b7 = 0;
+        public double b8 = 0;
+        public double b9 = 0;
 
-        public double e1;
-        public double e2;
+        public double e1 = 0;
+        public double e2 = 0;
 
         public void Clear()
         {

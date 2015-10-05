@@ -11,12 +11,12 @@ namespace MathPlaneModel
         /// <summary>
         /// Интегрирование по Эйлеру
         /// </summary>
-        /// <param name="n">Размерность модели</param>
         /// <param name="dt">Шаг интегрирования</param>
         /// <param name="X">Диф значения полученые путем моделирования</param>
         /// <param name="Y">Значения пареметров(после интегрирования)</param>
-        public void eiler(int n, double dt, double[] X, double[] Y)
+        public void eiler(double dt, double[] X, double[] Y)
         {
+            int n = Y.Length;
             for (int i = 0; i < n; i++)
             {
                 Y[i] = Y[i] + X[i] * dt;
@@ -27,14 +27,14 @@ namespace MathPlaneModel
         /// <summary>
         /// Первый этап интегрирование Рунге-Кутты
         /// </summary>
-        /// <param name="n">Размерность модели</param>
         /// <param name="dt">Шаг интегрирования</param>
         /// <param name="X">Диф значения полученые путем моделирования</param>
         /// <param name="Y">Значения пареметров(после интегрирования)</param>
         /// <param name="X0">Буферный массив(должен быть равен размерности модели)</param>
         /// <returns>Буферный массив для второго этапа</returns>
-        public Double[] rungeKytti_step1(int n, double dt, Double[] X, Double[] Y, Double[] X0)
+        public Double[] rungeKytti_step1(double dt, Double[] X, Double[] Y, Double[] X0)
         {
+            int n = Y.Length;
             for (int i = 0; i < n; i++)
             {
                 Y[i] = Y[i] + X[i] * dt;
@@ -47,13 +47,13 @@ namespace MathPlaneModel
         /// <summary>
         /// Второй этам интегрирования Рунге-Кутты
         /// </summary>
-        /// <param name="n">Размерность модели</param>
         /// <param name="dt">Шаг интегрирования</param>
         /// <param name="X">Диф значения полученые путем моделирования</param>
         /// <param name="Y">Значения пареметров(после интегрирования)</param>
         /// <param name="X0">Буферный массив полученый после первого этапа</param>
-        public void rungeKytti_step2(int n, double dt, Double[] X, Double[] Y, Double[] X0)
+        public void rungeKytti_step2(double dt, Double[] X, Double[] Y, Double[] X0)
         {
+            int n = Y.Length;
             for (int i = 0; i < n; i++)
             {
                 Y[i] = Y[i] + (X[i] - X0[i]) * dt;
@@ -63,13 +63,13 @@ namespace MathPlaneModel
         /// <summary>
         /// Первый этап интегрирования Рунге-Кутты с коррекцией
         /// </summary>
-        /// <param name="n">Размерность модели</param>
         /// <param name="dt">Шаг интегрирования</param>
         /// <param name="X0">Буферный массив(должен быть равен размерности модели)</param>
         /// <param name="Y">Значения пареметров(после интегрирования)</param>
         /// <returns>Буферный массив для второго этапа</returns>
-        public Double[] rungeKytti_withCor_step1(int n, double dt, Double[] X0, Double[] Y)
+        public Double[] rungeKytti_withCor_step1(double dt, Double[] X0, Double[] Y)
         {
+            int n = Y.Length;
             for (int i = 0; i < n; i++)
             {
                 Y[i] = Y[i] + dt * X0[i];
@@ -80,13 +80,13 @@ namespace MathPlaneModel
         /// <summary>
         /// Второй этап интегрирования Рунге-Кутты с коррекцией
         /// </summary>
-        /// <param name="n">Размерность модели</param>
         /// <param name="dt">Шаг интегрирования</param>
         /// <param name="X">Диф значения полученые путем моделирования</param>
         /// <param name="Y">Значения пареметров(после интегрирования)</param>
         /// <param name="X0">Буферный массив полученый после первого этапа</param>
-        public void rungeKytti_withCor_step2(int n, double dt, Double[] X, Double[] Y, Double[] X0)
+        public void rungeKytti_withCor_step2(double dt, Double[] X, Double[] Y, Double[] X0)
         {
+            int n = Y.Length;
             for (int i = 0; i < n; i++)
             {
                 Y[i] = Y[i] + (dt / 2) * (X[i] - X0[i]);

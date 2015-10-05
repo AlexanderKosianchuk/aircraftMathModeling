@@ -8,6 +8,13 @@ namespace MathPlaneModel
 
     public class Modeling
     {
+        private int n = 0;
+
+        public Modeling(int modelDimention)
+        {
+            n = modelDimention;
+        }
+
         Interpolation i = new Interpolation();
 
         public void bal(IntegralMeanings S, Coefficient C, Controls del, Statics s)
@@ -167,7 +174,7 @@ namespace MathPlaneModel
         /// </summary>
         /// <param name="d">Диф значения</param>
         /// <param name="n">Размерность модели</param>
-        public Double[] getDiffValues(DifferentialMeanings d, int n)
+        public Double[] getDiffValues(DifferentialMeanings d)
         {
             Double[] X =  new Double[n];
 
@@ -196,7 +203,7 @@ namespace MathPlaneModel
         /// </summary>
         /// <param name="S">Инт значения</param>
         /// <param name="n">Размерность модели</param>
-        public Double[] getIntegratedValues(IntegralMeanings S, int n)
+        public Double[] getIntegratedValues(IntegralMeanings S)
         {
             Double[] Y = new Double[n];
 
@@ -248,7 +255,7 @@ namespace MathPlaneModel
         /// </summary>
         /// <param name="d">Диф значения</param>
         /// <param name="n">Размерность модели</param>
-        public Double[] getDiffValuesIncrements(DifferentialMeanings d, int n)
+        public Double[] getDiffValuesIncrements(DifferentialMeanings d)
         {
             Double[] X = new Double[n];
 
@@ -277,7 +284,7 @@ namespace MathPlaneModel
         /// </summary>
         /// <param name="S">Инт значения</param>
         /// <param name="n">Размерность модели</param>
-        public Double[] getIntegratedValuesIncrements(IntegralMeanings S, int n)
+        public Double[] getIntegratedValuesIncrements(IntegralMeanings S)
         {
             Double[] Y = new Double[n];
 

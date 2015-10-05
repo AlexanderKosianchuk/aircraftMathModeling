@@ -22,3 +22,6 @@ C:\Visual Studio\FDAMM_RA\MathPlaneModel\bin\Debug\MathPlaneModel.dll
 C:\Visual Studio\FDAMM_RA\MathPlaneModel\bin\Debug\MathPlaneModel.pdb
 C:\Visual Studio\FDAMM_RA\MathPlaneModel\obj\Debug\MathPlaneModel.dll
 C:\Visual Studio\FDAMM_RA\MathPlaneModel\obj\Debug\MathPlaneModel.pdb
+C:\Visual Studio\aircraftMathModeling\MathPlaneModel\obj\Debug\MathPlaneModel.csprojResolveAssemblyReference.cache
+C:\Visual Studio\aircraftMathModeling\MathPlaneModel\obj\Debug\MathPlaneModel.dll
+C:\Visual Studio\aircraftMathModeling\MathPlaneModel\obj\Debug\MathPlaneModel.pdb

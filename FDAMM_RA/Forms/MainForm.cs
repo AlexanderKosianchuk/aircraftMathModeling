@@ -1,19 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
-using System.Threading;
 
-using ZedGraph;
 using WeifenLuo.WinFormsUI.Docking;
 
 using Resources;
-using MathPlaneModel;
 using PlaneVisualisation;
+using MathPlaneModel;
 
 namespace FDAMM_RA
 {
@@ -21,29 +13,10 @@ namespace FDAMM_RA
     {
         #region Global param init
 
-        public DifferentialMeanings d;
-        public IntegralMeanings S;
-        public Forses F;
-        public Moments M;
-        public Coefficient C;
-        public LinearizedCoefficient c;
-        public Overload N;
-        public Controls del;
-        public Statics s;
         public double t = 0;
 
-        Modeling modeling = new Modeling();
-        Integrating integ = new Integrating();
-
-        GlobalServParam p = new GlobalServParam();
-
-        static int modelDimention = 10;
-        //static int modelDimention = 23;
-
-        //Контейнеры диф и инт значений для передачи на интегрирование
-        Double[] X = new Double[modelDimention];
-        Double[] X0 = new Double[modelDimention];
-        Double[] Y = new Double[modelDimention];
+        GlobalServParamSingleton p = GlobalServParamSingleton.Instance;
+        IAircraftModel model = ModelCreator.GetAircraftModel();
 
         public FlyParamForm fpForm;
         GraphicsListForm glForm;
@@ -55,24 +28,13 @@ namespace FDAMM_RA
         AutopilotForm auForm;
         ScriptingAutopilotForm scrForm;
 
-        HardwareDeviceAttachingForm haForm;
-
         Object oDataGridCellValue;
-
-        //using acceleration
-        String acceleration;
 
         #endregion
 
         public MainForm()
         {
             InitializeComponent();   
-
-            //SetInitialConditions();
-            this.toolStripComboBox1_Design.SelectedItem = "Aviating";
-            this.toolStripComboBox_Acceleration.SelectedItem = "No acceleration";
-            this.toolStripComboBox1_IntegMeth.SelectedItem = "Runge Kutti with corr";
-            this.toolStripLabel_HardwareConnection.Image = BitmapResources.NotConnected;
         }
 
         #region Set initials
@@ -82,18 +44,6 @@ namespace FDAMM_RA
         /// </summary>
         public void SetInitialConditions()
         {
-            d = new DifferentialMeanings();
-            S = new IntegralMeanings();
-            F = new Forses();
-            M = new Moments();
-            C = new Coefficient();
-            c = new LinearizedCoefficient();
-            N = new Overload();
-            del = new Controls();
-            s = new Statics();
-
-            acceleration = this.toolStripComboBox_Acceleration.Text;
-
             SetInitialValues();
 
             if (stForm == null)
@@ -159,320 +109,9 @@ namespace FDAMM_RA
                 scrForm.Close();
                 scrForm = new ScriptingAutopilotForm(this);
             }
-
-            if (haForm == null)
-            { haForm = new HardwareDeviceAttachingForm(this); }
-            else if (scrForm != null)
-            {
-                haForm.Close();
-                haForm = new HardwareDeviceAttachingForm(this);
-            }
-
-        }
-
-        /// <summary>
-        /// Set initial values
-        /// </summary>
-        public void SetInitialValues()
-        {
-
-            d.Clear();
-            S.Clear();
-            F.Clear();
-            M.Clear();
-            C.Clear();
-            N.Clear();
-            del.Clear();
-            C.Clear();
-
-            //Обнуляем массивы интегрирования
-            for (int j = 0; j < modelDimention; j++)
-            {
-                X[j] = 0;
-                X0[j] = 0;
-                Y[j] = 0;
-            }
-
-            modeling.bal(S, C, del, s);
-            modeling.setRealParamValuesFromIncrements(S, d, del);
-            modeling.calcLinearCoef(S, del, c, s);
-
         }
 
         #endregion
-
-        /// <summary>
-        /// Processing step
-        /// </summary>
-        private void sim(ref double t, double dt)
-        {
-            //if(S.Vx < s.VtakeOff)
-            //{
-            //    Y = modeling.GetIntegratedValues(S, modelDimention);
-            //    modeling.takeOff(d, S, F, M, del, s);
-            //    X = modeling.GetDiffValues(d, modelDimention);
-            //    X0 = integ.RungeKytt_withCor_step1(modelDimention, dt, X0, Y);
-            //    integ.RungeKytt_withCor_step1(modelDimention, dt, X0, Y);
-            //    modeling.ReturnIntegratedValues(S, Y);
-                
-            //    Y = modeling.GetIntegratedValues(S, modelDimention);
-            //    modeling.takeOff(d, S, F, M, del, s);
-            //    X = modeling.GetDiffValues(d, modelDimention);
-            //    integ.RungeKytt_withCor_step2(modelDimention, dt, X, Y, X0);
-            //    modeling.ReturnIntegratedValues(S, Y);
-            //}
-
-            if (this.toolStripComboBox1_IntegMeth.Text == "Runge Kutti with corr")
-            {
-                Y = modeling.getIntegratedValuesIncrements(S, modelDimention);
-                modeling.dynLinear(d, S, c, del, s);
-                X = modeling.getDiffValuesIncrements(d, modelDimention);
-                X0 = integ.rungeKytti_withCor_step1(modelDimention, dt, X0, Y);
-                integ.rungeKytti_withCor_step1(modelDimention, dt, X0, Y);
-                modeling.returnIntegratedValuesIncrements(S, Y);
-
-                Y = modeling.getIntegratedValuesIncrements(S, modelDimention);
-                modeling.dynLinear(d, S, c, del, s);
-                X = modeling.getDiffValuesIncrements(d, modelDimention);
-                integ.rungeKytti_withCor_step2(modelDimention, dt, X, Y, X0);
-                modeling.returnIntegratedValuesIncrements(S, Y);
-                modeling.setRealParamValuesFromIncrements(S, d, del);
-            }
-            else if (this.toolStripComboBox1_IntegMeth.Text == "Runge Kutti")
-            {
-                Y = modeling.getIntegratedValuesIncrements(S, modelDimention);
-                modeling.dynLinear(d, S, c, del, s);
-                X = modeling.getDiffValuesIncrements(d, modelDimention);
-                X0 = integ.rungeKytti_step1(modelDimention, dt, X, Y, X0);
-                integ.rungeKytti_step1(modelDimention, dt, X, Y, X0);
-                modeling.returnIntegratedValuesIncrements(S, Y);
-
-                Y = modeling.getIntegratedValuesIncrements(S, modelDimention);
-                modeling.dynLinear(d, S, c, del, s);
-                X = modeling.getDiffValuesIncrements(d, modelDimention);
-                integ.rungeKytti_step2(modelDimention, dt, X, Y, X0);
-                modeling.returnIntegratedValuesIncrements(S, Y);
-                modeling.setRealParamValuesFromIncrements(S, d, del);
-            }
-            else
-            {
-                Y = modeling.getIntegratedValuesIncrements(S, modelDimention);
-                modeling.dynLinear(d, S, c, del, s);
-                X = modeling.getDiffValuesIncrements(d, modelDimention);
-                integ.eiler(modelDimention, dt, X, Y);
-                modeling.returnIntegratedValuesIncrements(S, Y);
-                modeling.setRealParamValuesFromIncrements(S, d, del);
-            }
-
-            dataGridFill();
-            initilizeGrapg();
-
-            t += s.dt;
-        }
-
-
-        Int32 dataForTranscendingViaUsb;
-
-        UInt32 numBytesWritten;
-        UInt32 numBytesAvailable;
-        UInt32 numBytesRead;
-
-        byte[] bytesToWrite;
-        byte[] bytesToRead;
-        byte[] paramByteArray = new byte[24];
-        byte[] doubleByteArray = new byte[4];
-        byte[] singleAlignByte = new byte[1];
-        double TEMP_PARAM_VALUE;
-
-        private void hardWareAcceleration(ref double t)
-        {
-
-            dataForTranscendingViaUsb = Convert.ToInt32(this.del.e_rv_DEL * 1000);
-            bytesToWrite = BitConverter.GetBytes(dataForTranscendingViaUsb);
-            numBytesWritten = 0;
-            haForm.ftStatus = haForm.ftdiDevice.Write(bytesToWrite, bytesToWrite.Length, ref numBytesWritten);
-            if (haForm.ftStatus != haForm.STATUS_OK)
-            {
-                //
-            }
-
-            numBytesAvailable = 0;
-            do
-            {
-                haForm.ftStatus = haForm.ftdiDevice.GetRxBytesAvailable(ref numBytesAvailable);
-                if (haForm.ftStatus != haForm.STATUS_OK)
-                {
-                    this.toolStripComboBox_Acceleration.SelectedItem = "No acceleration";
-                    MessageBox.Show("Failed to get number of bytes available to read (error " + haForm.ftStatus.ToString() + ")");
-                    haForm.ftdiDevice.Close();
-                }
-                Thread.Sleep(10);
-            }
-            while (numBytesAvailable < bytesToWrite.Length);
-
-            numBytesRead = 0;
-            bytesToRead = new byte[numBytesAvailable];
-            // Note that the Read method is overloaded, so can read string or byte array data
-            haForm.ftStatus = haForm.ftdiDevice.Read(bytesToRead, numBytesAvailable, ref numBytesRead);
-            if (haForm.ftStatus != haForm.STATUS_OK)
-            {
-                toolStripComboBox_Acceleration.SelectedItem = "No acceleration";
-                MessageBox.Show("Failed to read data (error " + haForm.ftStatus.ToString() + ")");
-                haForm.ftdiDevice.Close();
-            }
-            else
-            {
-
-                if (bytesToRead.Length == 25)
-                {
-                    byte[] alignByte = { 195 };
-                    Array.Copy(bytesToRead, 0, singleAlignByte, 0, 1);
-                    if (singleAlignByte[0] == alignByte[0])
-                    {
-                        Array.Copy(bytesToRead, 1, paramByteArray, 0, 24);
-                        readingParamsFromHardwareAccelerator();
-                        modeling.setRealParamValuesFromIncrements(S, d, del);
-
-                        dataGridFill();
-                        initilizeGrapg();
-
-                        t += s.dt;
-                    }
-                    else
-                    {
-                        //no align byte
-                    }
-
-
-                }
-                else if ((bytesToRead.Length > 24) && (bytesToRead.Length < 35))
-                {
-                    int i = 0;
-                    byte[] alignByte = { 195 };
-                    bool alignByteFound = false;
-                    bool noAlignByteInArray = false;
-                    while (!alignByteFound)
-                    {
-                        Array.Copy(bytesToRead, i, singleAlignByte, 0, 1);
-                        Array.Copy(bytesToRead, i + 1, paramByteArray, 0, 24);
-                        if (singleAlignByte[0] == alignByte[0])
-                        {
-                            alignByteFound = true;
-                        }
-                        else
-                        {
-                            if (i > 11)
-                            {
-                                alignByteFound = true;
-                                noAlignByteInArray = true;
-                            }
-                            else
-                            {
-                                i++;
-                                alignByteFound = false;
-                            }
-                        }
-
-                    }
-
-                    if (!noAlignByteInArray)
-                    {
-                        readingParamsFromHardwareAccelerator();
-                        modeling.setRealParamValuesFromIncrements(S, d, del);
-
-                        dataGridFill();
-                        initilizeGrapg();
-
-                        t += s.dt;
-                    }
-                    else
-                    {
-                        //no align byte in array
-                    }
-                }
-                else if ((bytesToRead.Length > 0) && (bytesToRead.Length < 5))
-                { 
-                    //may be del_rv transfer err                
-                }
-                else
-                {
-                    //if less 21 or more 31 - transfer err, leave previous values
-                }
-
-            }
-        }
-
-        void readingParamsFromHardwareAccelerator()
-        {
-
-            Array.Copy(paramByteArray, 0, doubleByteArray, 0, 4);
-            TEMP_PARAM_VALUE = Convert.ToDouble(BitConverter.ToInt32(doubleByteArray, 0)) / 1000;
-            if (TEMP_PARAM_VALUE > (S.THETA_DEL + 5) || TEMP_PARAM_VALUE < (S.THETA_DEL - 5))
-            {
-                //calculation or transfer err leave previous value            
-            }
-            else
-            {
-                S.THETA_DEL = TEMP_PARAM_VALUE;
-            }
-
-            Array.Copy(paramByteArray, 4, doubleByteArray, 0, 4);
-            TEMP_PARAM_VALUE = Convert.ToDouble(BitConverter.ToInt32(doubleByteArray, 0)) / 1000;
-            if (TEMP_PARAM_VALUE > (S.Wz_DEL + 5) || TEMP_PARAM_VALUE < (S.Wz_DEL - 5))
-            {
-                //calculation or transfer err leave previous value            
-            }
-            else
-            {
-                S.Wz_DEL = TEMP_PARAM_VALUE;
-            }
-
-            Array.Copy(paramByteArray, 8, doubleByteArray, 0, 4);
-            TEMP_PARAM_VALUE = Convert.ToDouble(BitConverter.ToInt32(doubleByteArray, 0)) / 1000;
-            if (TEMP_PARAM_VALUE > (S.THETA_PATH_DEL + 5) || TEMP_PARAM_VALUE < (S.THETA_PATH_DEL - 5))
-            {
-                //calculation or transfer err leave previous value            
-            }
-            else
-            {
-                S.THETA_PATH_DEL = TEMP_PARAM_VALUE;
-            }
-
-            Array.Copy(paramByteArray, 12, doubleByteArray, 0, 4);
-            TEMP_PARAM_VALUE = Convert.ToDouble(BitConverter.ToInt32(doubleByteArray, 0)) / 1000;
-            if (TEMP_PARAM_VALUE > (S.ALPHA_DEL + 5) || TEMP_PARAM_VALUE < (S.ALPHA_DEL - 5))
-            {
-                //calculation or transfer err leave previous value            
-            }
-            else
-            {
-                S.ALPHA_DEL = TEMP_PARAM_VALUE;
-            }
-
-            Array.Copy(paramByteArray, 16, doubleByteArray, 0, 4);
-            TEMP_PARAM_VALUE = Convert.ToDouble(BitConverter.ToInt32(doubleByteArray, 0)) / 1000;
-            if (TEMP_PARAM_VALUE > (S.Yg_DEL + 100) || TEMP_PARAM_VALUE < (S.Yg_DEL - 100))
-            {
-                //calculation or transfer err leave previous value            
-            }
-            else
-            {
-                S.Yg_DEL = TEMP_PARAM_VALUE;
-            }
-
-            Array.Copy(paramByteArray, 20, doubleByteArray, 0, 4);
-            TEMP_PARAM_VALUE = Convert.ToDouble(BitConverter.ToInt32(doubleByteArray, 0)) / 1000;
-            if (TEMP_PARAM_VALUE > (d.Wz_DEL + 10) || TEMP_PARAM_VALUE < (d.Wz_DEL - 10))
-            {
-                //calculation or transfer err leave previous value            
-            }
-            else
-            {
-                d.Wz_DEL = TEMP_PARAM_VALUE;
-            }
-            
-           
-        }
 
         private void maneuring()
         {
@@ -530,10 +169,12 @@ namespace FDAMM_RA
             if (stForm != null)
             { s = stForm.GetStaticsValues(); }
 
-            if (this.toolStripComboBox_Acceleration.Text == "No acceleration")
-            { sim(ref t, s.dt); }
-            else
-            { hardWareAcceleration(ref t); }
+            sim(ref t, s.dt);
+
+            dataGridFill();
+            initilizeGrapg();
+
+            t += s.dt;
 
             if (auForm.executeChangeHeightDuringSim.Checked)
             { maneuring(); }
@@ -690,52 +331,15 @@ namespace FDAMM_RA
         {
             if (clicked == false)
             {
-                if (this.toolStripComboBox_Acceleration.Text == "No acceleration")
+                //запустить симуляцию
+                stepTimer.Enabled = true;
+                if (fpForm != null)
                 {
-                    //запустить симуляцию
-                    stepTimer.Enabled = true;
-                    if (fpForm != null)
-                    {
-                        fpForm.Enabled = false;
-                    }
-                    toolStripButton1_StartSim.Text = "Stop";
-                    toolStripButton1_StartSim.Image = BitmapResources.Pause;
+                    fpForm.Enabled = false;
                 }
-                else if (this.toolStripComboBox_Acceleration.Text == "Hardware acceleration")
-                {
-                    if (toolStripTextBox_IterationNum.Text == ""
-                        || toolStripTextBox_IterationNum.Text == "0"
-                        || toolStripTextBox_IterationNum.Text == " ")
-                    {
-                        //запустить симуляцию
-                        stepTimer.Enabled = true;
-                        if (fpForm != null)
-                        {
-                            fpForm.Enabled = false;
-                        }
-                        toolStripButton1_StartSim.Text = "Stop";
-                        toolStripButton1_StartSim.Image = BitmapResources.Pause;
-                    }
-                    else
-                    {
-                        toolStripButton1_StartSim.Text = "Stop";
-                        toolStripButton1_StartSim.Image = BitmapResources.Pause;
-                        for (int i = 0; i < Convert.ToInt32(toolStripTextBox_IterationNum.Text); i++)
-                        {
-                            if (avForm != null)
-                            { avForm.GetControlValues(del); }
-
-                            if (stForm != null)
-                            { s = stForm.GetStaticsValues(); }
-
-                            hardWareAcceleration(ref t);
-                        }
-                        toolStripButton1_StartSim.Text = "StartSim";
-                        toolStripButton1_StartSim.Image = BitmapResources.Play;
-                    }
-                    clicked = !clicked;
-                }
-
+                toolStripButton1_StartSim.Text = "Stop";
+                toolStripButton1_StartSim.Image = BitmapResources.Pause;
+                clicked = !clicked;
             }
             else if (clicked == true)
             {
@@ -868,27 +472,7 @@ namespace FDAMM_RA
             }
         }
 
-        private void toolStripComboBox_Acceleration_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            acceleration = toolStripComboBox_Acceleration.Text;
-            if (toolStripComboBox_Acceleration.Text == "Hardware acceleration")
-            {
-                this.toolStripLabel_HardwareConnection.Image = BitmapResources.Connect;
-                this.toolStripComboBox1_IntegMeth.Enabled = false;
-                haForm.ShowDialog();                
-            }
-            else
-            {
-                this.toolStripLabel_HardwareConnection.Image = BitmapResources.NotConnected;
-                this.toolStripComboBox1_IntegMeth.Enabled = true;
-            }
-
-        }
-
         #endregion
-
-
-
     }
 }
 

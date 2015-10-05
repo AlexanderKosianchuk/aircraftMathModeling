@@ -40,9 +40,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IAircraftModel.cs" />
     <Compile Include="DymamicParam.cs" />
     <Compile Include="Integrating.cs" />
     <Compile Include="Interpolation.cs" />
+    <Compile Include="HorizontalFlightModel.cs" />
+    <Compile Include="ModelCreator.cs" />
     <Compile Include="Modeling.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Statics.cs" />
