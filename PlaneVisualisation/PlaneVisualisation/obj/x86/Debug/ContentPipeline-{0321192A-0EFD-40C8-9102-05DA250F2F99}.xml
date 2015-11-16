@@ -7,19 +7,19 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Visual Studio\FDAMM_RA\PlaneVisualisation\PlaneVisualisation\bin\x86\Debug\Content\plane.xnb</Output>
-      <Time>2011-09-11T21:38:42+03:00</Time>
+      <Output>C:\Visual Studio\aircraftMathModeling\PlaneVisualisation\PlaneVisualisation\bin\x86\Debug\Content\plane.xnb</Output>
+      <Time>2015-09-26T19:24:56+03:00</Time>
       <Dependency>
-        <Key>C:\Visual Studio\FDAMM_RA\PlaneVisualisation\PlaneVisualisation\obj\x86\Debug\plane_0.xml</Key>
-        <Value>2015-09-13T21:29:51.3846864+03:00</Value>
+        <Key>C:\Visual Studio\aircraftMathModeling\PlaneVisualisation\PlaneVisualisation\obj\x86\Debug\plane_0.xml</Key>
+        <Value>2015-11-16T21:47:42.2683229+02:00</Value>
       </Dependency>
     </Item>
     <Item>
       <Source>plane.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
-      <Output>C:\Visual Studio\FDAMM_RA\PlaneVisualisation\PlaneVisualisation\obj\x86\Debug\plane_0.xml</Output>
-      <Time>2011-09-11T21:38:42+03:00</Time>
+      <Output>C:\Visual Studio\aircraftMathModeling\PlaneVisualisation\PlaneVisualisation\obj\x86\Debug\plane_0.xml</Output>
+      <Time>2015-09-26T19:24:56+03:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -28,10 +28,10 @@
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Visual Studio\FDAMM_RA\PlaneVisualisation\PlaneVisualisationContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Visual Studio\FDAMM_RA\PlaneVisualisation\PlaneVisualisation\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Visual Studio\FDAMM_RA\PlaneVisualisation\PlaneVisualisation\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Visual Studio\FDAMM_RA\PlaneVisualisation\PlaneVisualisation\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Visual Studio\aircraftMathModeling\PlaneVisualisation\PlaneVisualisationContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Visual Studio\aircraftMathModeling\PlaneVisualisation\PlaneVisualisation\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Visual Studio\aircraftMathModeling\PlaneVisualisation\PlaneVisualisation\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Visual Studio\aircraftMathModeling\PlaneVisualisation\PlaneVisualisation\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>

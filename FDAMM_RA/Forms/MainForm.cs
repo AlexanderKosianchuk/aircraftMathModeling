@@ -1,11 +1,19 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
 using System.Windows.Forms;
+using System.Threading;
 
+using ZedGraph;
 using WeifenLuo.WinFormsUI.Docking;
 
 using Resources;
-using PlaneVisualisation;
 using MathPlaneModel;
+using PlaneVisualisation;
 
 namespace FDAMM_RA
 {
@@ -13,10 +21,29 @@ namespace FDAMM_RA
     {
         #region Global param init
 
+        public DifferentialMeanings d;
+        public IntegralMeanings S;
+        public Forses F;
+        public Moments M;
+        public Coefficient C;
+        public LinearizedCoefficient c;
+        public Overload N;
+        public Controls del;
+        public Statics s;
         public double t = 0;
 
-        GlobalServParamSingleton p = GlobalServParamSingleton.Instance;
-        IAircraftModel model = ModelCreator.GetAircraftModel();
+        Modeling modeling = new Modeling();
+        Integrating integ = new Integrating();
+
+        GlobalServParam p = new GlobalServParam();
+
+        static int modelDimention = 10;
+        //static int modelDimention = 23;
+
+        //Контейнеры диф и инт значений для передачи на интегрирование
+        Double[] X = new Double[modelDimention];
+        Double[] X0 = new Double[modelDimention];
+        Double[] Y = new Double[modelDimention];
 
         public FlyParamForm fpForm;
         GraphicsListForm glForm;
@@ -30,11 +57,18 @@ namespace FDAMM_RA
 
         Object oDataGridCellValue;
 
+        //using acceleration
+        String acceleration;
+
         #endregion
 
         public MainForm()
         {
             InitializeComponent();   
+
+            //SetInitialConditions();
+            this.toolStripComboBox1_Design.SelectedItem = "Aviating";
+            this.toolStripComboBox1_IntegMeth.SelectedItem = "Runge Kutti with corr";
         }
 
         #region Set initials
@@ -44,6 +78,16 @@ namespace FDAMM_RA
         /// </summary>
         public void SetInitialConditions()
         {
+            d = new DifferentialMeanings();
+            S = new IntegralMeanings();
+            F = new Forses();
+            M = new Moments();
+            C = new Coefficient();
+            c = new LinearizedCoefficient();
+            N = new Overload();
+            del = new Controls();
+            s = new Statics();
+
             SetInitialValues();
 
             if (stForm == null)
@@ -109,9 +153,108 @@ namespace FDAMM_RA
                 scrForm.Close();
                 scrForm = new ScriptingAutopilotForm(this);
             }
+
+        }
+
+        /// <summary>
+        /// Set initial values
+        /// </summary>
+        public void SetInitialValues()
+        {
+
+            d.Clear();
+            S.Clear();
+            F.Clear();
+            M.Clear();
+            C.Clear();
+            N.Clear();
+            del.Clear();
+            C.Clear();
+
+            //Обнуляем массивы интегрирования
+            for (int j = 0; j < modelDimention; j++)
+            {
+                X[j] = 0;
+                X0[j] = 0;
+                Y[j] = 0;
+            }
+
+            modeling.bal(S, C, del, s);
+            modeling.setRealParamValuesFromIncrements(S, d, del);
+            modeling.calcLinearCoef(S, del, c, s);
+
         }
 
         #endregion
+
+        /// <summary>
+        /// Processing step
+        /// </summary>
+        private void sim(ref double t, double dt)
+        {
+            //if(S.Vx < s.VtakeOff)
+            //{
+            //    Y = modeling.GetIntegratedValues(S, modelDimention);
+            //    modeling.takeOff(d, S, F, M, del, s);
+            //    X = modeling.GetDiffValues(d, modelDimention);
+            //    X0 = integ.RungeKytt_withCor_step1(modelDimention, dt, X0, Y);
+            //    integ.RungeKytt_withCor_step1(modelDimention, dt, X0, Y);
+            //    modeling.ReturnIntegratedValues(S, Y);
+                
+            //    Y = modeling.GetIntegratedValues(S, modelDimention);
+            //    modeling.takeOff(d, S, F, M, del, s);
+            //    X = modeling.GetDiffValues(d, modelDimention);
+            //    integ.RungeKytt_withCor_step2(modelDimention, dt, X, Y, X0);
+            //    modeling.ReturnIntegratedValues(S, Y);
+            //}
+
+            if (this.toolStripComboBox1_IntegMeth.Text == "Runge Kutti with corr")
+            {
+                Y = modeling.getIntegratedValuesIncrements(S, modelDimention);
+                modeling.dynLinear(d, S, c, del, s);
+                X = modeling.getDiffValuesIncrements(d, modelDimention);
+                X0 = integ.rungeKytti_withCor_step1(modelDimention, dt, X0, Y);
+                integ.rungeKytti_withCor_step1(modelDimention, dt, X0, Y);
+                modeling.returnIntegratedValuesIncrements(S, Y);
+
+                Y = modeling.getIntegratedValuesIncrements(S, modelDimention);
+                modeling.dynLinear(d, S, c, del, s);
+                X = modeling.getDiffValuesIncrements(d, modelDimention);
+                integ.rungeKytti_withCor_step2(modelDimention, dt, X, Y, X0);
+                modeling.returnIntegratedValuesIncrements(S, Y);
+                modeling.setRealParamValuesFromIncrements(S, d, del);
+            }
+            else if (this.toolStripComboBox1_IntegMeth.Text == "Runge Kutti")
+            {
+                Y = modeling.getIntegratedValuesIncrements(S, modelDimention);
+                modeling.dynLinear(d, S, c, del, s);
+                X = modeling.getDiffValuesIncrements(d, modelDimention);
+                X0 = integ.rungeKytti_step1(modelDimention, dt, X, Y, X0);
+                integ.rungeKytti_step1(modelDimention, dt, X, Y, X0);
+                modeling.returnIntegratedValuesIncrements(S, Y);
+
+                Y = modeling.getIntegratedValuesIncrements(S, modelDimention);
+                modeling.dynLinear(d, S, c, del, s);
+                X = modeling.getDiffValuesIncrements(d, modelDimention);
+                integ.rungeKytti_step2(modelDimention, dt, X, Y, X0);
+                modeling.returnIntegratedValuesIncrements(S, Y);
+                modeling.setRealParamValuesFromIncrements(S, d, del);
+            }
+            else
+            {
+                Y = modeling.getIntegratedValuesIncrements(S, modelDimention);
+                modeling.dynLinear(d, S, c, del, s);
+                X = modeling.getDiffValuesIncrements(d, modelDimention);
+                integ.eiler(modelDimention, dt, X, Y);
+                modeling.returnIntegratedValuesIncrements(S, Y);
+                modeling.setRealParamValuesFromIncrements(S, d, del);
+            }
+
+            dataGridFill();
+            initilizeGrapg();
+
+            t += s.dt;
+        }
 
         private void maneuring()
         {
@@ -169,12 +312,7 @@ namespace FDAMM_RA
             if (stForm != null)
             { s = stForm.GetStaticsValues(); }
 
-            sim(ref t, s.dt);
-
-            dataGridFill();
-            initilizeGrapg();
-
-            t += s.dt;
+            sim(ref t, s.dt); 
 
             if (auForm.executeChangeHeightDuringSim.Checked)
             { maneuring(); }
@@ -339,7 +477,9 @@ namespace FDAMM_RA
                 }
                 toolStripButton1_StartSim.Text = "Stop";
                 toolStripButton1_StartSim.Image = BitmapResources.Pause;
+              
                 clicked = !clicked;
+
             }
             else if (clicked == true)
             {
@@ -472,7 +612,8 @@ namespace FDAMM_RA
             }
         }
 
-        #endregion
+         #endregion
+
     }
 }
 

@@ -29,8 +29,6 @@
             { scrForm.Close(); }
             if (auForm != null)
             { auForm.Close(); }
-            if (haForm != null)
-            { haForm.Close(); }
 
             if (disposing && (components != null))
             {
@@ -78,17 +76,17 @@
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.toolStripContainer2 = new System.Windows.Forms.ToolStripContainer();
             this.dockPanel1 = new WeifenLuo.WinFormsUI.Docking.DockPanel();
+            this.toolStripSimulation = new System.Windows.Forms.ToolStrip();
+            this.toolStripAutomation = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton7_Autopilot = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton8_ScriptingAutopilot = new System.Windows.Forms.ToolStripButton();
             this.toolStripDesign = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1_FullSceen = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripComboBox1_Design = new System.Windows.Forms.ToolStripComboBox();
-            this.toolStripSimulation = new System.Windows.Forms.ToolStrip();
             this.toolStripIntegMeth = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripComboBox1_IntegMeth = new System.Windows.Forms.ToolStripComboBox();
-            this.toolStripAutomation = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton7_Autopilot = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton8_ScriptingAutopilot = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton10_Run = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton11_Stop = new System.Windows.Forms.ToolStripButton();
             this.toolStripDockForms.SuspendLayout();
@@ -96,10 +94,10 @@
             this.toolStripContainer2.ContentPanel.SuspendLayout();
             this.toolStripContainer2.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer2.SuspendLayout();
-            this.toolStripDesign.SuspendLayout();
             this.toolStripSimulation.SuspendLayout();
-            this.toolStripIntegMeth.SuspendLayout();
             this.toolStripAutomation.SuspendLayout();
+            this.toolStripDesign.SuspendLayout();
+            this.toolStripIntegMeth.SuspendLayout();
             this.SuspendLayout();
             // 
             // stepTimer
@@ -245,10 +243,10 @@
             // 
             // toolStripContainer2.TopToolStripPanel
             // 
-            this.toolStripContainer2.TopToolStripPanel.Controls.Add(this.toolStripDesign);
-            this.toolStripContainer2.TopToolStripPanel.Controls.Add(this.toolStripDockForms);
             this.toolStripContainer2.TopToolStripPanel.Controls.Add(this.toolStripSimulation);
             this.toolStripContainer2.TopToolStripPanel.Controls.Add(this.toolStripIntegMeth);
+            this.toolStripContainer2.TopToolStripPanel.Controls.Add(this.toolStripDesign);
+            this.toolStripContainer2.TopToolStripPanel.Controls.Add(this.toolStripDockForms);
             this.toolStripContainer2.TopToolStripPanel.Controls.Add(this.toolStripAutomation);
             // 
             // dockPanel1
@@ -308,46 +306,6 @@
             this.dockPanel1.Skin = dockPanelSkin1;
             this.dockPanel1.TabIndex = 0;
             // 
-            // toolStripDesign
-            // 
-            this.toolStripDesign.Dock = System.Windows.Forms.DockStyle.None;
-            this.toolStripDesign.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1_FullSceen,
-            this.toolStripSeparator2,
-            this.toolStripComboBox1_Design});
-            this.toolStripDesign.Location = new System.Drawing.Point(9, 0);
-            this.toolStripDesign.Name = "toolStripDesign";
-            this.toolStripDesign.Size = new System.Drawing.Size(174, 25);
-            this.toolStripDesign.TabIndex = 12;
-            // 
-            // toolStripButton1_FullSceen
-            // 
-            this.toolStripButton1_FullSceen.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1_FullSceen.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1_FullSceen.Image")));
-            this.toolStripButton1_FullSceen.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1_FullSceen.Name = "toolStripButton1_FullSceen";
-            this.toolStripButton1_FullSceen.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton1_FullSceen.Text = "FullSceen";
-            this.toolStripButton1_FullSceen.Click += new System.EventHandler(this.toolStripButton1_FullSceen_Click);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripComboBox1_Design
-            // 
-            this.toolStripComboBox1_Design.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.toolStripComboBox1_Design.Items.AddRange(new object[] {
-            "Clear",
-            "Aviating",
-            "Autopilot",
-            "StaticsDebug"});
-            this.toolStripComboBox1_Design.Name = "toolStripComboBox1_Design";
-            this.toolStripComboBox1_Design.Size = new System.Drawing.Size(100, 25);
-            this.toolStripComboBox1_Design.ToolTipText = "Design";
-            this.toolStripComboBox1_Design.SelectedIndexChanged += new System.EventHandler(this.toolStripComboBox1_Design_SelectedIndexChanged);
-            // 
             // toolStripSimulation
             // 
             this.toolStripSimulation.Dock = System.Windows.Forms.DockStyle.None;
@@ -356,36 +314,9 @@
             this.toolStripButton2_Reset});
             this.toolStripSimulation.Location = new System.Drawing.Point(3, 50);
             this.toolStripSimulation.Name = "toolStripSimulation";
-            this.toolStripSimulation.Size = new System.Drawing.Size(56, 25);
+            this.toolStripSimulation.Size = new System.Drawing.Size(87, 25);
             this.toolStripSimulation.TabIndex = 0;
             this.toolStripSimulation.Text = "toolStripSimulation";
-            // 
-            // toolStripIntegMeth
-            // 
-            this.toolStripIntegMeth.Dock = System.Windows.Forms.DockStyle.None;
-            this.toolStripIntegMeth.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripLabel1,
-            this.toolStripComboBox1_IntegMeth});
-            this.toolStripIntegMeth.Location = new System.Drawing.Point(59, 50);
-            this.toolStripIntegMeth.Name = "toolStripIntegMeth";
-            this.toolStripIntegMeth.Size = new System.Drawing.Size(237, 25);
-            this.toolStripIntegMeth.TabIndex = 18;
-            // 
-            // toolStripLabel1
-            // 
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(100, 22);
-            this.toolStripLabel1.Text = "Integrating method";
-            // 
-            // toolStripComboBox1_IntegMeth
-            // 
-            this.toolStripComboBox1_IntegMeth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.toolStripComboBox1_IntegMeth.Items.AddRange(new object[] {
-            "Eiler",
-            "Runge Kutti",
-            "Runge Kutti with corr"});
-            this.toolStripComboBox1_IntegMeth.Name = "toolStripComboBox1_IntegMeth";
-            this.toolStripComboBox1_IntegMeth.Size = new System.Drawing.Size(125, 25);
             // 
             // toolStripAutomation
             // 
@@ -418,6 +349,73 @@
             this.toolStripButton8_ScriptingAutopilot.Text = "ScriptingAutopilot";
             this.toolStripButton8_ScriptingAutopilot.Click += new System.EventHandler(this.toolStripButton2_ScriptingAutopilot_Click);
             // 
+            // toolStripDesign
+            // 
+            this.toolStripDesign.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStripDesign.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton1_FullSceen,
+            this.toolStripSeparator2,
+            this.toolStripComboBox1_Design});
+            this.toolStripDesign.Location = new System.Drawing.Point(9, 0);
+            this.toolStripDesign.Name = "toolStripDesign";
+            this.toolStripDesign.Size = new System.Drawing.Size(141, 25);
+            this.toolStripDesign.TabIndex = 12;
+            // 
+            // toolStripButton1_FullSceen
+            // 
+            this.toolStripButton1_FullSceen.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1_FullSceen.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1_FullSceen.Image")));
+            this.toolStripButton1_FullSceen.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1_FullSceen.Name = "toolStripButton1_FullSceen";
+            this.toolStripButton1_FullSceen.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton1_FullSceen.Text = "FullSceen";
+            this.toolStripButton1_FullSceen.Click += new System.EventHandler(this.toolStripButton1_FullSceen_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripComboBox1_Design
+            // 
+            this.toolStripComboBox1_Design.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.toolStripComboBox1_Design.Items.AddRange(new object[] {
+            "Clear",
+            "Aviating",
+            "Autopilot",
+            "StaticsDebug"});
+            this.toolStripComboBox1_Design.Name = "toolStripComboBox1_Design";
+            this.toolStripComboBox1_Design.Size = new System.Drawing.Size(100, 25);
+            this.toolStripComboBox1_Design.ToolTipText = "Design";
+            this.toolStripComboBox1_Design.SelectedIndexChanged += new System.EventHandler(this.toolStripComboBox1_Design_SelectedIndexChanged);
+            // 
+            // toolStripIntegMeth
+            // 
+            this.toolStripIntegMeth.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStripIntegMeth.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripLabel1,
+            this.toolStripComboBox1_IntegMeth});
+            this.toolStripIntegMeth.Location = new System.Drawing.Point(90, 50);
+            this.toolStripIntegMeth.Name = "toolStripIntegMeth";
+            this.toolStripIntegMeth.Size = new System.Drawing.Size(237, 25);
+            this.toolStripIntegMeth.TabIndex = 18;
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(100, 22);
+            this.toolStripLabel1.Text = "Integrating method";
+            // 
+            // toolStripComboBox1_IntegMeth
+            // 
+            this.toolStripComboBox1_IntegMeth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.toolStripComboBox1_IntegMeth.Items.AddRange(new object[] {
+            "Eiler",
+            "Runge Kutti",
+            "Runge Kutti with corr"});
+            this.toolStripComboBox1_IntegMeth.Name = "toolStripComboBox1_IntegMeth";
+            this.toolStripComboBox1_IntegMeth.Size = new System.Drawing.Size(125, 25);
+            // 
             // toolStripButton10_Run
             // 
             this.toolStripButton10_Run.Name = "toolStripButton10_Run";
@@ -449,14 +447,14 @@
             this.toolStripContainer2.TopToolStripPanel.PerformLayout();
             this.toolStripContainer2.ResumeLayout(false);
             this.toolStripContainer2.PerformLayout();
-            this.toolStripDesign.ResumeLayout(false);
-            this.toolStripDesign.PerformLayout();
             this.toolStripSimulation.ResumeLayout(false);
             this.toolStripSimulation.PerformLayout();
-            this.toolStripIntegMeth.ResumeLayout(false);
-            this.toolStripIntegMeth.PerformLayout();
             this.toolStripAutomation.ResumeLayout(false);
             this.toolStripAutomation.PerformLayout();
+            this.toolStripDesign.ResumeLayout(false);
+            this.toolStripDesign.PerformLayout();
+            this.toolStripIntegMeth.ResumeLayout(false);
+            this.toolStripIntegMeth.PerformLayout();
             this.ResumeLayout(false);
 
         }

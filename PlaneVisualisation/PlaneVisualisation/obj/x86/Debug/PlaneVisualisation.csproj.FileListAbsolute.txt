@@ -70,3 +70,16 @@ C:\Visual Studio\FDAMM_RA\PlaneVisualisation\PlaneVisualisation\obj\x86\Debug\Pl
 C:\Visual Studio\FDAMM_RA\PlaneVisualisation\PlaneVisualisation\obj\x86\Debug\PlaneVisualisation.csproj.GenerateResource.Cache
 C:\Visual Studio\FDAMM_RA\PlaneVisualisation\PlaneVisualisation\obj\x86\Debug\PlaneVisualisation.dll
 C:\Visual Studio\FDAMM_RA\PlaneVisualisation\PlaneVisualisation\obj\x86\Debug\PlaneVisualisation.pdb
+C:\Visual Studio\aircraftMathModeling\PlaneVisualisation\PlaneVisualisation\bin\x86\Debug\Content\plane.xnb
+C:\Visual Studio\aircraftMathModeling\PlaneVisualisation\PlaneVisualisation\bin\x86\Debug\PlaneVisualisation.dll.config
+C:\Visual Studio\aircraftMathModeling\PlaneVisualisation\PlaneVisualisation\bin\x86\Debug\PlaneVisualisation.dll
+C:\Visual Studio\aircraftMathModeling\PlaneVisualisation\PlaneVisualisation\bin\x86\Debug\PlaneVisualisation.pdb
+C:\Visual Studio\aircraftMathModeling\PlaneVisualisation\PlaneVisualisation\bin\x86\Debug\MathPlaneModel.dll
+C:\Visual Studio\aircraftMathModeling\PlaneVisualisation\PlaneVisualisation\bin\x86\Debug\WeifenLuo.WinFormsUI.Docking.dll
+C:\Visual Studio\aircraftMathModeling\PlaneVisualisation\PlaneVisualisation\bin\x86\Debug\MathPlaneModel.pdb
+C:\Visual Studio\aircraftMathModeling\PlaneVisualisation\PlaneVisualisation\obj\x86\Debug\PlaneVisualisation.csprojResolveAssemblyReference.cache
+C:\Visual Studio\aircraftMathModeling\PlaneVisualisation\PlaneVisualisation\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Visual Studio\aircraftMathModeling\PlaneVisualisation\PlaneVisualisation\obj\x86\Debug\PlaneVisualisation.PlaneVisualisationForm.resources
+C:\Visual Studio\aircraftMathModeling\PlaneVisualisation\PlaneVisualisation\obj\x86\Debug\PlaneVisualisation.csproj.GenerateResource.Cache
+C:\Visual Studio\aircraftMathModeling\PlaneVisualisation\PlaneVisualisation\obj\x86\Debug\PlaneVisualisation.dll
+C:\Visual Studio\aircraftMathModeling\PlaneVisualisation\PlaneVisualisation\obj\x86\Debug\PlaneVisualisation.pdb

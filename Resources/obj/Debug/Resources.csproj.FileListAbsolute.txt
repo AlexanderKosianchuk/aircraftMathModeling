@@ -28,3 +28,10 @@ C:\Visual Studio\FDAMM_RA\Resources\obj\Debug\Resources.BitmapResources.resource
 C:\Visual Studio\FDAMM_RA\Resources\obj\Debug\Resources.csproj.GenerateResource.Cache
 C:\Visual Studio\FDAMM_RA\Resources\obj\Debug\Resources.dll
 C:\Visual Studio\FDAMM_RA\Resources\obj\Debug\Resources.pdb
+C:\Visual Studio\aircraftMathModeling\Resources\bin\Debug\Resources.dll
+C:\Visual Studio\aircraftMathModeling\Resources\bin\Debug\Resources.pdb
+C:\Visual Studio\aircraftMathModeling\Resources\obj\Debug\Resources.csprojResolveAssemblyReference.cache
+C:\Visual Studio\aircraftMathModeling\Resources\obj\Debug\Resources.BitmapResources.resources
+C:\Visual Studio\aircraftMathModeling\Resources\obj\Debug\Resources.csproj.GenerateResource.Cache
+C:\Visual Studio\aircraftMathModeling\Resources\obj\Debug\Resources.dll
+C:\Visual Studio\aircraftMathModeling\Resources\obj\Debug\Resources.pdb

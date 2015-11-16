@@ -5,9 +5,8 @@ using System.Text;
 
 namespace FDAMM_RA
 {
-    class GlobalServParamSingleton
+    class GlobalServParam
     {
-
         /// <summary>
         ///Максимальное количество отображаемых записей в таблице
         /// </summary>
@@ -18,6 +17,9 @@ namespace FDAMM_RA
         /// Текущее количество строчек в таблице
         /// </summary>
         public int rowNum = 0;
+
+        public static int modelDimention = 12;
+        //public static int polnuy_razmer = 53;
 
         //Начальный размер оси Х
         public int XAxisMin = 0;
@@ -30,16 +32,5 @@ namespace FDAMM_RA
         // Устанавливаем по умолчанию интервал по оси Y
         public int YAxisMin = -50;
         public int YAxisMax = 50;
-
-        private static readonly GlobalServParamSingleton instance = new GlobalServParamSingleton();
-
-        public static GlobalServParamSingleton Instance
-        {
-            get { return instance; }
-        }
-
-        /// защищённый конструктор нужен, чтобы предотвратить создание экземпляра класса Singleton
-        protected GlobalServParamSingleton() 
-        { }
     }
 }

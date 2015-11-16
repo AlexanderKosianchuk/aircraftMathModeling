@@ -3,7 +3,7 @@
   <Asset Type="Graphics:MeshContent">
     <Name>ChamferBox01</Name>
     <Identity>
-      <SourceFilename>C:\Visual Studio\FDAMM_RA\PlaneVisualisation\PlaneVisualisationContent\plane.FBX</SourceFilename>
+      <SourceFilename>C:\Visual Studio\aircraftMathModeling\PlaneVisualisation\PlaneVisualisationContent\plane.FBX</SourceFilename>
       <SourceTool>FbxImporter</SourceTool>
     </Identity>
     <Transform>-4.13818526E-07 -7.19523466E-16 2.54 0 -1.11026928E-07 2.54 -1.736906E-14 0 -2.54 -1.11026928E-07 -4.13818526E-07 0 125.149094 4.367927E-13 0.381355 1</Transform>
@@ -26,7 +26,7 @@
     <Resource ID="#Resource1" Type="Graphics:BasicMaterialContent">
       <Name>01 - Default</Name>
       <Identity>
-        <SourceFilename>C:\Visual Studio\FDAMM_RA\PlaneVisualisation\PlaneVisualisationContent\plane.FBX</SourceFilename>
+        <SourceFilename>C:\Visual Studio\aircraftMathModeling\PlaneVisualisation\PlaneVisualisationContent\plane.FBX</SourceFilename>
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>
